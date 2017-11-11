@@ -3,7 +3,7 @@
 Performant and composable type guards for runtime data validation.
 
 ```ts
-import { TypeChecker, isString, isNumber } from './typeguard-composer';
+import { validate, isString, isNumber } from './typeguard-composer';
 import { AddressSchema } from './address.schema';
 
 const PersonSchema = {
@@ -12,7 +12,7 @@ const PersonSchema = {
   addresses: [AddressSchema]
 }
 
-TypeChecker.validate(PersonSchema, { name: 'Test Elek', age: 18, friends: []});
+validate(PersonSchema, { name: 'Test Elek', age: 18, friends: []});
 ```
 
 ## Built in validators
