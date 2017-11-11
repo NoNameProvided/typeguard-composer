@@ -1,6 +1,18 @@
 # Ignore tests source files
 src/**/*.spec.ts
 
+# Ignore test helpers
+test-utils/**/*
+
+# Ignore not needed rool level files
+
+.editorconfig
+.prettierrc.json
+CHANGELOG.md
+CONTRIBUTING.md
+jest.config.js
+tsconfig.json
+
 # Ignore compiled test files
 build/**/*.spec.js
 build/**/*.spec.js.map

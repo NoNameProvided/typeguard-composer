@@ -1,14 +1,14 @@
 {
   "name": "typeguard-composer",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Composable type guards for runtime data validation.",
-  "main": "index.js",
+  "main": "build/src/index.js",
   "scripts": {
     "build": "tsc",
     "lint": "echo \"Error: tslint not added yet.\" && exit 1",
     "test": "jest --coverage --silent",
     "test:nocoverage": "jest",
-    "publish": "echo \"Error: no publish script specified\" && exit 1",
+    "publish": "npm run build",
     "precommit": "lint-staged"
   },
   "lint-staged": {
