@@ -3,8 +3,8 @@
 Performant and composable type guards for runtime data validation.
 
 ```ts
-import { validate } from './typeguard-composer';
-import { isString, isNumber } from './typeguard-composer/validators';
+import { validate } from 'typeguard-composer';
+import { isString, isNumber } from 'typeguard-composer/validators';
 import { AddressSchema } from './address.schema';
 
 const PersonSchema = {
@@ -15,6 +15,10 @@ const PersonSchema = {
 
 validate(PersonSchema, { name: 'Test Elek', age: 18, friends: []});
 ```
+
+## Install
+
+To install run `npm i typeguard-composer`.
 
 ## Built in validators
 
