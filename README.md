@@ -1,4 +1,4 @@
-# typeguard-composer
+# typeguard-composer [![Build Status](https://travis-ci.org/NoNameProvided/typeguard-composer.svg?branch=master)](https://travis-ci.org/NoNameProvided/typeguard-composer)
 
 Performant and composable type guards for runtime data validation.
 
