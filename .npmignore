@@ -1,0 +1,10 @@
+# Ignore tests source files
+src/**/*.spec.ts
+
+# Ignore compiled test files
+build/**/*.spec.js
+build/**/*.spec.js.map
+build/**/*.spec.d.ts
+
+# Ignore generated coverage
+coverage
