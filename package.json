@@ -8,7 +8,10 @@
     "lint": "echo \"Error: tslint not added yet.\" && exit 1",
     "test": "jest --coverage --silent",
     "test:nocoverage": "jest",
-    "publish": "npm run build",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags && rm -rf build",
+    "prepublishOnly": "npm version patch -m 'chore: bump version to %s'",
     "precommit": "lint-staged",
     "coverage": "codecov -f coverage/*.json"
   },
@@ -27,6 +30,9 @@
     "type",
     "guards",
     "typescript"
+  ],
+  "files": [
+    "build"
   ],
   "author": "Attila Olah <NoNameProvided@users.noreply.github.com >",
   "license": "MIT",
