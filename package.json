@@ -1,6 +1,6 @@
 {
   "name": "typeguard-composer",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Composable type guards for runtime data validation.",
   "main": "build/src/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "test": "jest --coverage --silent",
     "test:nocoverage": "jest",
     "preversion": "npm test",
-    "version": "npm run build && git add -A dist",
+    "publish": "npm run build",
     "postversion": "git push && git push --tags && rm -rf build",
     "prepublishOnly": "npm version patch -m 'chore: bump version to %s'",
     "precommit": "lint-staged",
