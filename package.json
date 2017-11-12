@@ -9,8 +9,8 @@
     "test": "jest --coverage --silent",
     "test:nocoverage": "jest",
     "publish": "npm test && npm run build",
+    "postpublish": "git push && git push --tags",
     "prepublishOnly": "npm version patch -m 'chore: bump version to %s'",
-    "postversion": "git push && git push --tags",
     "precommit": "lint-staged",
     "coverage": "codecov -f coverage/*.json"
   },
@@ -29,9 +29,6 @@
     "type",
     "guards",
     "typescript"
-  ],
-  "files": [
-    "build"
   ],
   "author": "Attila Olah <NoNameProvided@users.noreply.github.com >",
   "license": "MIT",
