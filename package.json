@@ -9,7 +9,8 @@
     "test": "jest --coverage --silent",
     "test:nocoverage": "jest",
     "publish": "npm run build",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "coverage": "codecov -f coverage/*.json"
   },
   "lint-staged": {
     "*.{ts,json}": [
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@types/jest": "21.1.6",
     "@types/node": "8.0.51",
+    "codecov": "3.0.0",
     "jest": "21.2.1",
     "prettier": "1.8.2",
     "ts-jest": "21.2.1",
