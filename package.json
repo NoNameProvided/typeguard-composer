@@ -8,10 +8,9 @@
     "lint": "echo \"Error: tslint not added yet.\" && exit 1",
     "test": "jest --coverage --silent",
     "test:nocoverage": "jest",
-    "preversion": "npm test",
-    "publish": "npm run build",
-    "postversion": "git push && git push --tags && rm -rf build",
+    "publish": "npm test && npm run build",
     "prepublishOnly": "npm version patch -m 'chore: bump version to %s'",
+    "postversion": "git push && git push --tags",
     "precommit": "lint-staged",
     "coverage": "codecov -f coverage/*.json"
   },
