@@ -13,7 +13,7 @@ const PersonSchema = {
   addresses: [AddressSchema]
 }
 
-validate(PersonSchema, { name: 'Test Elek', age: 18, friends: []});
+validate(PersonSchema, { name: 'Test Elek', age: 18, addresses: []});
 ```
 
 ## Install
