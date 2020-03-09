@@ -28,6 +28,14 @@ validate(PersonSchema, { name: 'Test Elek', age: 18, addresses: []});
 npm install typeguard-composer
 ```
 
+## TODO
+
+- add two different error for schema and value errors
+- add support for logging/returning invalid values
+- add support for throwing error on extraneous values
+- return object instead of simple true/false with reasoning (eg: "'MyValue' was expected to match isMyValidator.")
+- create repo for complex types (dates, id formats, phone numbers, addresses, etc)
+
 ## Usage
 
 _To be written... include info about defining schemas and how there validation works..._
@@ -40,9 +48,9 @@ The public API is extremely small, it consists only one function to validate val
 
 Tries to validate the received value against the received schema. If the value is valid it returns true and false otherwise.
 
-**Possible errors:**
-
-- `TypeError` when the provided value does not match the provided schema.
+<!-- **Possible errors:** -->
+<!--  -->
+<!-- - `TypeError` when the provided value does not match the provided schema. -->
 
 **Signature:**
 
