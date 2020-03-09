@@ -1,4 +1,6 @@
-# typeguard-composer [![Build Status](https://travis-ci.org/NoNameProvided/typeguard-composer.svg?branch=master)](https://travis-ci.org/NoNameProvided/typeguard-composer) [![codecov](https://codecov.io/gh/NoNameProvided/typeguard-composer/branch/master/graph/badge.svg)](https://codecov.io/gh/NoNameProvided/typeguard-composer)
+# typeguard-composer 
+
+[![codecov][codecov-badge]][codecov-page]
 
 Performant and composable type guards for runtime data validation.
 
@@ -27,3 +29,6 @@ This libary inculdes validators for the basic primitives only. You can (soon) us
 ## License
 
 MIT Licensed
+
+[codecov-badge]: https://codecov.io/gh/NoNameProvided/typeguard-composer/branch/master/graph/badge.svg
+[codecov-page]: https://codecov.io/gh/NoNameProvided/typeguard-composer
