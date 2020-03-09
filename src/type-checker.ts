@@ -1,5 +1,5 @@
-import { ObjectSchema } from './object-signature.interface';
-import { CallableTypeGuard } from './callable-type-guard.interface';
+import { ObjectSchema } from './interfaces/object-signature.interface';
+import { CallableTypeGuard } from './interfaces/callable-type-guard.interface';
 import { isFunction, isObject, isArray, isAny, isValue } from './validators';
 
 export function validate(schema: ObjectSchema | ObjectSchema[] | CallableTypeGuard | CallableTypeGuard[], value: any): boolean {

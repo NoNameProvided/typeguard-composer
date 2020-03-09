@@ -1,6 +1,6 @@
 import { validate } from './type-checker';
 import { isString } from './validators';
-import { ContactListSchema, ContactSchema } from '../test-utils/'
+import { ContactListSchema, ContactSchema } from '../testing'
 
 describe('validate function', () => {
   describe('validates ObjectSchemas properly', () => {
