@@ -37,12 +37,12 @@
   },
   "homepage": "https://github.com/NoNameProvided/typeguard-composer#readme",
   "devDependencies": {
-    "@types/jest": "21.1.6",
-    "@types/node": "8.0.51",
-    "codecov": "3.0.0",
-    "jest": "21.2.1",
-    "prettier": "1.8.2",
-    "ts-jest": "21.2.1",
-    "typescript": "2.6.1"
+    "@types/jest": "25.1.4",
+    "@types/node": "13.9.0",
+    "codecov": "3.6.5",
+    "jest": "25.1.0",
+    "prettier": "1.19.1",
+    "ts-jest": "25.2.1",
+    "typescript": "3.8.3"
   }
 }
