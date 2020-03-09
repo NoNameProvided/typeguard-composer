@@ -1,6 +1,6 @@
 # typeguard-composer 
 
-[![codecov][codecov-badge]][codecov-page]
+![CI][github-actions-badge] [![codecov][codecov-badge]][codecov-page]
 
 Performant and composable type guards for runtime data validation.
 
@@ -32,3 +32,4 @@ MIT Licensed
 
 [codecov-badge]: https://codecov.io/gh/NoNameProvided/typeguard-composer/branch/master/graph/badge.svg
 [codecov-page]: https://codecov.io/gh/NoNameProvided/typeguard-composer
+[github-actions-badge]: https://github.com/NoNameProvided/typeguard-composer/workflows/CI/badge.svg?branch=master&event=push
