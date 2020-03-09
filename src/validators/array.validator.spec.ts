@@ -45,7 +45,7 @@ describe('isArray validator', () => {
     });
 
     test('returns true for arrays', () => {
-      expect(isArray([ 'first', 'second' ])).toBe(true);
+      expect(isArray(['first', 'second'])).toBe(true);
     });
   });
 });

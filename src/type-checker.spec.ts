@@ -1,10 +1,9 @@
 import { validate } from './type-checker';
 import { isString } from './validators';
-import { ContactListSchema, ContactSchema } from '../testing'
+import { ContactListSchema, ContactSchema } from '../testing';
 
 describe('validate function', () => {
   describe('validates ObjectSchemas properly', () => {
-
     const address = {
       city: 'Lost Heaven',
       zip: 5000,
@@ -14,15 +13,12 @@ describe('validate function', () => {
     const contact = {
       address: address,
       addresses: [address, address],
-      nickNames: [ 'Tesztike', 'Blah' ],
+      nickNames: ['Tesztike', 'Blah'],
       firstName: 'Test',
       lastName: 'Elek',
     };
 
-    const contactList = [
-      contact,
-      contact,
-    ];
+    const contactList = [contact, contact];
 
     test('validates object with valid schema properly', () => {
       expect(validate(ContactSchema, contact)).toBe(true);
@@ -51,8 +47,6 @@ describe('validate function', () => {
     test('validates array of objects with in-correct array schema properly', () => {
       expect(validate(null, contactList)).toBe(false);
     });
-
-
   });
 
   describe('validates properly with passed bare CallableTypeGuards', () => {

@@ -45,7 +45,7 @@ describe('isUndefined validator', () => {
     });
 
     test('returns false for arrays', () => {
-      expect(isUndefined([ 'first', 'second' ])).toBe(false);
+      expect(isUndefined(['first', 'second'])).toBe(false);
     });
   });
 });

@@ -1,5 +1,4 @@
 export interface ValidatorOptions {
-
   /**
    * Defaults to false. In debug mode matching doesn't stop on the first
    * failed assertion, but continues and logs the list of validation errors to the console.

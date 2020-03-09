@@ -45,7 +45,7 @@ describe('isObject validator', () => {
     });
 
     test('returns true for arrays', () => {
-      expect(isObject([ 'first', 'second' ])).toBe(true);
+      expect(isObject(['first', 'second'])).toBe(true);
     });
   });
 });

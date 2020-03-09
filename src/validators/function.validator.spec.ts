@@ -45,7 +45,7 @@ describe('isFunction validator', () => {
     });
 
     test('returns false for arrays', () => {
-      expect(isFunction([ 'first', 'second' ])).toBe(false);
+      expect(isFunction(['first', 'second'])).toBe(false);
     });
   });
 });

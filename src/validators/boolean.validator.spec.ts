@@ -45,7 +45,7 @@ describe('isBoolean validator', () => {
     });
 
     test('returns false for arrays', () => {
-      expect(isBoolean([ 'first', 'second' ])).toBe(false);
+      expect(isBoolean(['first', 'second'])).toBe(false);
     });
   });
 
@@ -58,5 +58,4 @@ describe('isBoolean validator', () => {
       expect(isBoolean(new Boolean(true), true)).toBe(true);
     });
   });
-
 });

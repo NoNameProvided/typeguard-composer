@@ -1,4 +1,3 @@
-
 /**
  * Returns true if the passed arg is a valid object with zero or more key.
  * NOTE: An array is an object too.

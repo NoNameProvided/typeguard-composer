@@ -45,7 +45,7 @@ describe('isString validator', () => {
     });
 
     test('returns false for arrays', () => {
-      expect(isString([ 'first', 'second' ])).toBe(false);
+      expect(isString(['first', 'second'])).toBe(false);
     });
   });
 
@@ -58,5 +58,4 @@ describe('isString validator', () => {
       expect(isString(new String('hey'), true)).toBe(true);
     });
   });
-
 });

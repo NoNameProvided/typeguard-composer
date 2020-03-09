@@ -45,7 +45,7 @@ describe('isSymbol validator', () => {
     });
 
     test('returns false for arrays', () => {
-      expect(isSymbol([ 'first', 'second' ])).toBe(false);
+      expect(isSymbol(['first', 'second'])).toBe(false);
     });
   });
 });

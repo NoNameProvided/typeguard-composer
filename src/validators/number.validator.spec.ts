@@ -45,7 +45,7 @@ describe('isNumber validator', () => {
     });
 
     test('returns false for arrays', () => {
-      expect(isNumber([ 'first', 'second' ])).toBe(false);
+      expect(isNumber(['first', 'second'])).toBe(false);
     });
   });
 
@@ -58,5 +58,4 @@ describe('isNumber validator', () => {
       expect(isNumber(new Number(5), true)).toBe(true);
     });
   });
-
 });

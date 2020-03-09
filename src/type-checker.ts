@@ -2,8 +2,10 @@ import { ObjectSchema } from './interfaces/object-signature.interface';
 import { CallableTypeGuard } from './interfaces/callable-type-guard.interface';
 import { isFunction, isObject, isArray, isAny, isValue } from './validators';
 
-export function validate(schema: ObjectSchema | ObjectSchema[] | CallableTypeGuard | CallableTypeGuard[], value: any): boolean {
-
+export function validate(
+  schema: ObjectSchema | ObjectSchema[] | CallableTypeGuard | CallableTypeGuard[],
+  value: any
+): boolean {
   if (isCallableTypeGuard(schema)) {
     return schema(value);
   }
@@ -25,7 +27,6 @@ export function validate(schema: ObjectSchema | ObjectSchema[] | CallableTypeGua
 }
 
 function checkSchema(schema: ObjectSchema, value: any): boolean {
-
   if (!isValue(value) || !isObject(value)) {
     return false;
   }
@@ -54,15 +55,11 @@ function checkSchema(schema: ObjectSchema, value: any): boolean {
       return checkSchemaArray(schemaOrTypeGuard, value[key]);
     }
   });
-
 }
 
 function checkSchemaArray(schemaArray: ObjectSchema[], value: any[]): boolean {
-    return isArray(value) ? value
-      .map(item => checkSchema(schemaArray[0], item))
-      .every(result => result) : false;
-
-  }
+  return isArray(value) ? value.map(item => checkSchema(schemaArray[0], item)).every(result => result) : false;
+}
 
 /**
  * Returns true if the passed arg is a valid schema (aka a non-empty object), false otherwise.

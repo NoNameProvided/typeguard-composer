@@ -45,7 +45,7 @@ describe('isNull validator', () => {
     });
 
     test('returns false for arrays', () => {
-      expect(isNull([ 'first', 'second' ])).toBe(false);
+      expect(isNull(['first', 'second'])).toBe(false);
     });
   });
 });

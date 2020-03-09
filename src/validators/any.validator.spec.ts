@@ -45,7 +45,7 @@ describe('isAny validator', () => {
     });
 
     test('returns true for arrays', () => {
-      expect(isAny([ 'first', 'second' ])).toBe(true);
+      expect(isAny(['first', 'second'])).toBe(true);
     });
   });
 });
