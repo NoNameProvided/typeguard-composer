@@ -1,20 +1,36 @@
-# Developer Guide
+# Contributing Guidelines
 
-First things first, thanks for contributing to this repo! This small docs hopefully will help you get started and also helps you to follow a few rules which needs to be kept to accept any PR for the project.
+> __Note:__ This project doesn't allow contributions for new validator functions. If you have an idea for a new
+validator you can open a PR for it in the [NoNameProvided/typeguard-composer-validators][tcv-repo] repository.
 
-## Setup
+## Locally link the project
 
-To start hacking on the project nothing special is required. You only have `npm install` the dependencies and you are ready to go. After this you only have to run `npm start`, and changes will be compiled automatically to a build folder.
+To test the module locally you can need to follow these steps:
 
-To test the module you can simply run `npm link` to create a global link for this package, then you can run `npm link typeguard-composer` in any of your project to link this package to it.
+- build the project with `npm run build`
+- enter the `build` directory
+- run `npm link` from the build folder to create a global link
+- run `npm link typeguard-composer` in any of your project to link it to this package
 
 ## Testing
 
-There are no watch for tests, but you can call specific ones via `npm run test:nocoverage -- testname.spec`.
+We use Jest for testing. To run it in watch mode, you need to run the following command:
 
-## Code Style
+```bash
+npx jest --watch --verbose --silent
+```
 
-Prettier is used for enforcing code-style, the code will be formatted automatically when creating a commit.
+or optionally you can run a specific test only:
+
+```bash
+npx jest --verbose --silent -- testname.spec
+```
+
+## Code Formatting
+
+- Prettier is used for enforcing a unified code-style
+- you can run the `npm run prettier:format` command to format the codebase 
+- every contribution must have correct code formatting before it can be accepted
 
 ## Commit Message Format
 
@@ -26,20 +42,22 @@ We use a variant of Angular Team's commit message format. This leads to more rea
 
 Type must be one of the predefiend values listed here:
 
-- fix: A bug fix
-- feat: A new feature
-- docs: Documentation only changes
-- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- refactor: A code change that neither fixes a bug nor adds a feature
-- perf: A code change that improves performance
-- test: Adding missing tests
-- chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- fix: a bug fix
+- feat: a new feature
+- docs: documentation only changes
+- style: changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- refactor: code change that neither fixes a bug nor adds a feature
+- perf: code change that improves performance
+- test: adding missing tests
+- chore: changes to the build process or auxiliary tools and libraries such as documentation generation
 
 ### Subject
 
-The subject contains succinct description of the change:
+The subject must contain succinct description of the change:
 
 - use the imperative, present tense: "change" not "changed" nor "changes"
 - do not capitalize first letter
 - do not place a period (.) at the end
 - entire length of the commit message must not go over 50 characters
+
+[tcv-repo]: https://github.com/NoNameProvided/typeguard-composer-validators
