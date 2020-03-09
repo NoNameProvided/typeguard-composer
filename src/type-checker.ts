@@ -1,11 +1,7 @@
-import { ObjectSchema } from './interfaces/object-signature.interface';
-import { CallableTypeGuard } from './interfaces/callable-type-guard.interface';
-import { isFunction, isObject, isArray, isAny, isValue } from './validators';
+import { ObjectSchema, ValidatorOptions, CallableTypeGuard, TypeSchema } from './interfaces';
+import { isFunction, isObject, isArray, isValue } from './validators';
 
-export function validate(
-  schema: ObjectSchema | ObjectSchema[] | CallableTypeGuard | CallableTypeGuard[],
-  value: any
-): boolean {
+export function validate(schema: TypeSchema, value: any, options: ValidatorOptions): boolean {
   if (isCallableTypeGuard(schema)) {
     return schema(value);
   }
