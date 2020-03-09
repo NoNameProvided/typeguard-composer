@@ -32,4 +32,4 @@ MIT Licensed
 
 [codecov-badge]: https://codecov.io/gh/NoNameProvided/typeguard-composer/branch/master/graph/badge.svg
 [codecov-page]: https://codecov.io/gh/NoNameProvided/typeguard-composer
-[github-actions-badge]: https://github.com/NoNameProvided/typeguard-composer/workflows/CI/badge.svg?branch=master&event=push
+[github-actions-badge]: https://github.com/NoNameProvided/typeguard-composer/workflows/Continuous%20Integration/badge.svg?branch=master&event=push
