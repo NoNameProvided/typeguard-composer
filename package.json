@@ -1,7 +1,7 @@
 {
   "name": "typeguard-composer",
   "private": true,
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "Composable type guards for runtime data validation.",
   "main": "index.js",
   "author": "Attila Oláh",

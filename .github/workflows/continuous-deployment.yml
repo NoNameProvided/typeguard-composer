@@ -1,0 +1,21 @@
+name: Continuous Deployment
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deployment:
+    name: Linters
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/prepare-package.js
+      - run: npm publish build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
