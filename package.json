@@ -20,7 +20,7 @@
     "build": "tsc",
     "prettier:format": "prettier --write ./src/**/*.ts ./src/*.ts",
     "prettier:check": "prettier --check ./src/**/*.ts ./src/*.ts",
-    "test": "jest --coverage --silent",
+    "test": "jest --coverage --verbose --silent",
     "prepublishOnly": "npm run build && npm version patch -m 'chore: bump version to %s'"
   },
   "devDependencies": {
