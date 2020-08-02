@@ -7,7 +7,7 @@ export interface ValidatorOptions {
 
   /**
    * Defaults to false. If set to true, it will match wrapper classes for the primitive types.
-   * 
+   *
    * Note: This value can be overwritten when it configured on the type guards calls in a schema.
    */
   matchWrapper: boolean;
