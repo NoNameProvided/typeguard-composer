@@ -1,4 +1,4 @@
-# typeguard-composer 
+# typeguard-composer
 
 ![CI][github-actions-badge] [![codecov][codecov-badge]][codecov-page]
 
@@ -16,10 +16,10 @@ import { AddressSchema } from './my-address.schema';
 const PersonSchema = {
   name: isString,
   age: isNumber,
-  addresses: [AddressSchema]
-}
+  addresses: [AddressSchema],
+};
 
-validate(PersonSchema, { name: 'Test Elek', age: 18, addresses: []});
+validate(PersonSchema, { name: 'Test Elek', age: 18, addresses: [] });
 ```
 
 ## Installation
@@ -60,7 +60,6 @@ validate(schema: TypeSchema, value: any, options: ValidatorOptions): boolean
 
 ---
 
-
 ### Validators
 
 - validators are simple functions what implement the type guard pattern described the [Typescript documentation][ts-typeguards]
@@ -70,7 +69,7 @@ validate(schema: TypeSchema, value: any, options: ValidatorOptions): boolean
 
 > _Note: You can check out the [NoNameProvided/typeguard-composer-validators][tcv-repo] repository to see a list of available pre-written complex schemas and validator functions._
 
-List of included base validators: 
+List of included base validators:
 
 - `isBoolean`
 - `isNumber`

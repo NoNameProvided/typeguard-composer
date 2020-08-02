@@ -1,7 +1,7 @@
 # Contributing Guidelines
 
-> __Note:__ This project doesn't allow contributions for new validator functions. If you have an idea for a new
-validator you can open a PR for it in the [NoNameProvided/typeguard-composer-validators][tcv-repo] repository.
+> **Note:** This project doesn't allow contributions for new validator functions. If you have an idea for a new
+> validator you can open a PR for it in the [NoNameProvided/typeguard-composer-validators][tcv-repo] repository.
 
 ## Locally link the project
 
@@ -29,7 +29,7 @@ npx jest --verbose --silent -- testname.spec
 ## Code Formatting
 
 - Prettier is used for enforcing a unified code-style
-- you can run the `npm run prettier:format` command to format the codebase 
+- you can run the `npm run prettier:format` command to format the codebase
 - every contribution must have correct code formatting before it can be accepted
 
 ## Commit Message Format

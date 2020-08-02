@@ -1,5 +1,5 @@
-import { AddressSchema } from "./address-schema";
-import { isString } from "../src/validators/index";
+import { AddressSchema } from './address-schema';
+import { isString } from '../src/validators/index';
 
 export const ContactSchema = {
   address: AddressSchema,
@@ -7,4 +7,4 @@ export const ContactSchema = {
   nickNames: [isString],
   firstName: isString,
   lastName: isString,
-}
+};

@@ -4,4 +4,4 @@ export const AddressSchema = {
   city: isString,
   zip: isNumber,
   address: isString,
-}
+};

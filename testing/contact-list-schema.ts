@@ -1,3 +1,3 @@
-import { ContactSchema } from "./contact-schema";
+import { ContactSchema } from './contact-schema';
 
-export const ContactListSchema = [ ContactSchema ];
+export const ContactListSchema = [ContactSchema];

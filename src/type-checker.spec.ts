@@ -54,7 +54,7 @@ describe('validate function', () => {
       expect(validate(isString, 'hey')).toBe(true);
     });
 
-    test('validates with simple CallableTypeGuard properly', () => {
+    test('validates with simple CallableTypeGuard properly 2', () => {
       expect(validate(isString, ['one', 'two'])).toBe(false);
     });
 
