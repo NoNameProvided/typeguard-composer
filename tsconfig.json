@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
-    "strict": false,
-    "target": "es2015",
     "module": "commonjs",
-    "declaration": true,
-    "sourceMap": true,
-    "rootDir": "src",
+    "target": "es2018",
+    "lib": ["es2018"],
     "outDir": "build",
+    "rootDir": "./src",
+    "strict": true,
+    "sourceMap": true,
     "esModuleInterop": true,
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "src/**/*.spec.ts", "testing"],
-  "compileOnSave": false
+  "exclude": ["node_modules", "sample", "**/*.spec.ts", "testing/**"]
 }

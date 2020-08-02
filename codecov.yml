@@ -6,3 +6,6 @@ coverage:
     default:
       threshold: 3
 comment: off
+ignore:
+  - testing/**/*.ts
+  - src/**/*.interface.ts

@@ -1,25 +1,31 @@
-name: Continuous Integration
+name: CI
 on: push
 jobs:
-  linters:
+  checks:
     name: Linters
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - run: npm ci
+      - run: npm ci --ignore-scripts
       - run: npm run prettier:check
+      - run: npm run lint:check
   tests:
-    name: Build & Tests
+    name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - run: npm ci
+      - uses: actions/checkout@v1
+      - name: Setting up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+      - run: npm ci --ignore-scripts
+      - run: npm run test:ci
       - run: npm install codecov -g
+      - run: codecov -f ./coverage/clover.xml -t ${{ secrets.CODECOV_TOKEN }}
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+      - run: npm ci --ignore-scripts
       - run: npm run build
-      - run: npm run test
